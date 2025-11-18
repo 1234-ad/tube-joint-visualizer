@@ -1,0 +1,21 @@
+ICON PLACEHOLDER
+
+Before building the application, you need to add an icon file.
+
+Required: icon.png (512x512 pixels)
+
+Quick options:
+1. Use any 512x512 PNG image as a temporary icon
+2. Create a custom icon using online tools:
+   - https://favicon.io/
+   - https://www.canva.com/
+   - https://www.icongenerator.com/
+
+3. Design your own with:
+   - Adobe Illustrator
+   - Figma
+   - Inkscape (free)
+
+Place the icon.png file in this assets/ directory before building.
+
+For testing purposes, you can use any square PNG image.
