@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tube Joint Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Tube Joint Visualizer</h2>
+            
+            <div class="section">
+                <h3>Tube Type</h3>
+                <select id="tubeType">
+                    <option value="rectangular">Rectangular</option>
+                    <option value="square">Square</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <h3>Tube Parameters</h3>
+                <label>Width: <input type="number" id="tubeWidth" value="50" min="10" max="200"></label>
+                <label>Height: <input type="number" id="tubeHeight" value="30" min="10" max="200"></label>
+                <label>Thickness: <input type="number" id="tubeThickness" value="3" min="1" max="10"></label>
+                <label>Length: <input type="number" id="tubeLength" value="200" min="50" max="500"></label>
+            </div>
+
+            <div class="section">
+                <h3>Joint Parameters</h3>
+                <label>Angle: <input type="number" id="jointAngle" value="90" min="0" max="180"></label>
+                <div class="angle-presets">
+                    <button onclick="setAngle(30)">30°</button>
+                    <button onclick="setAngle(45)">45°</button>
+                    <button onclick="setAngle(90)">90°</button>
+                    <button onclick="setAngle(135)">135°</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Actions</h3>
+                <button id="addTube" class="btn-primary">Add Tube</button>
+                <button id="clearAll" class="btn-secondary">Clear All</button>
+            </div>
+
+            <div class="section">
+                <h3>View Options</h3>
+                <label><input type="checkbox" id="wireframe"> Wireframe Mode</label>
+                <label><input type="checkbox" id="showJoints" checked> Show Joints</label>
+                <label><input type="checkbox" id="showDimensions"> Show Dimensions</label>
+            </div>
+
+            <div class="section">
+                <h3>Controls</h3>
+                <button id="undo">Undo</button>
+                <button id="redo">Redo</button>
+            </div>
+
+            <div class="info">
+                <p><strong>Controls:</strong></p>
+                <p>• Left Click + Drag: Rotate view</p>
+                <p>• Right Click + Drag: Pan view</p>
+                <p>• Scroll: Zoom in/out</p>
+                <p>• Click tube: Select/Move</p>
+            </div>
+        </div>
+
+        <div id="canvas-container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
